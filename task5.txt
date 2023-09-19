@@ -1,0 +1,135 @@
+package task5;
+
+import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+class std{
+	private String name;
+	private int rollno;
+	private String grade;
+	
+	public std(String name,int rollno,String grade) {
+		this.name=name;
+		this.rollno=rollno;
+		this.grade=grade;
+	}
+	
+	public String getname() {
+		return name;
+	}
+	
+	public int getrollno() {
+		return rollno;
+	}
+	public String getgrade() {
+		return grade;
+	}
+	@Override
+	public String toString() {
+		return "Name: "+name+",Roll Number :"+rollno+",Grade:"+grade;
+	}
+}
+class Studentmanage{
+	private List<std>students;
+	
+	public Studentmanage() {
+		students=new ArrayList<>();
+	}
+	
+	public void addstudent(std student) {
+		students.add(student);
+	}
+	public void removestudent(int rollno) {
+		students.removeIf(student->student.getrollno()==rollno);
+	}
+	
+	public std searchstd(int rollno) {
+		for(std student:students) {
+			if(student.getrollno()==rollno) {
+				return student;
+			}
+		}
+		return null;
+	}
+	public void displayallstd() {
+		for(std student:students) {
+			System.out.println(student);
+		}
+	}
+	public List<std>getallstd(){
+		return students;
+	}
+}
+public class Student_registration_system {
+	public static void main(String[] args) {
+		
+		Studentmanage s=new Studentmanage();
+		Scanner sc=new Scanner(System.in);
+		
+		while(true)
+		{
+			System.out.println("Student management system");
+			System.out.println("1. add student");
+			System.out.println("2. remove student");
+			System.out.println("3. search student");
+			System.out.println("4. dispaly students");
+			System.out.println("5. exit");
+			System.out.println("enter your choice");
+			
+			int ch=sc.nextInt();
+			sc.nextLine();
+			
+			switch(ch) {
+			case 1:
+				System.out.println("enter name of student");
+				String name=sc.nextLine();
+				System.out.println("enter roll number");
+				int rollno=sc.nextInt();
+				sc.nextLine();
+				System.out.println("enter grade");
+				String grade=sc.nextLine();
+				std student=new std(name,rollno,grade);
+				s.addstudent(student);
+				break;
+				
+			case 2:
+				System.out.println("enter rollno to remove");
+				int rollrem=sc.nextInt();
+				s.removestudent(rollrem);
+				break;
+				
+			case 3:
+				System.out.println("enter rollno to search");
+				int rollsch=sc.nextInt();
+				std found=s.searchstd(rollsch);
+				if(found!=null) {
+					System.out.println("Student found"+found);
+				}else {
+					System.out.println("Student not found");
+				}
+				break;
+				
+			case 4:
+				System.out.println("all students");
+				s.displayallstd();
+				break;
+				
+			case 5:
+				System.out.println("exit");
+				System.exit(0);
+				break;
+			
+			default:
+				System.out.println("invalid choice\n.try again");
+			}
+			
+			
+		}
+		
+
+	}
+
+}
+
