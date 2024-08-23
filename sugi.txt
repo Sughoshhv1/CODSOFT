@@ -1,0 +1,463 @@
+style.css
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body{
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url("../img/bg.jpeg") no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.wrapper{
+  width: 420px;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, .2);
+  backdrop-filter: blur(2px);
+  color: #fff;
+  border-radius: 12px;
+  padding: 30px 40px;
+}
+.wrapper h1{
+  font-size: 36px;
+  text-align: center;
+}
+.wrapper .input-box{
+  position: relative;
+  width: 100%;
+  height: 50px;
+  margin: 30px 0;
+}
+.input-box input{
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  border: 2px solid rgba(255, 255, 255, .2);
+  border-radius: 40px;
+  font-size: 16px;
+  color: #fff;
+  padding: 20px 45px 20px 20px;
+}
+.input-box input::placeholder{
+  color: #fff;
+}
+.input-box i{
+  position: absolute;
+  right: 20px;
+  top: 30%;
+  /* transform: translate(-50%); */
+  font-size: 20px;
+
+}
+.wrapper .remember-forgot{
+  display: flex;
+  justify-content: space-between;
+  font-size: 14.5px;
+  margin: -15px 0 15px;
+}
+.remember-forgot label input{
+  accent-color: #fff;
+  margin-right: 3px;
+
+}
+.remember-forgot a{
+  color: #fff;
+  text-decoration: none;
+
+}
+.remember-forgot a:hover{
+  text-decoration: underline;
+}
+.wrapper .btn{
+  width: 100%;
+  height: 45px;
+  background: #fff;
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+  cursor: pointer;
+  font-size: 16px;
+  color: #333;
+  font-weight: 600;
+}
+.wrapper .register-link{
+  font-size: 14.5px;
+  text-align: center;
+  margin: 20px 0 15px;
+
+}
+.register-link p a{
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+.register-link p a:hover{
+  text-decoration: underline;
+}
+.main-section{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.section{
+  height: 350px;
+  width: 350px;
+  background: transparent;
+  border: 1px solid green;
+}
+
+
+styles.css
+
+
+
+/* General styles */
+body {
+  min-height: 100vh;
+  background-image: url("../img/bg.jpeg") ;
+  background-size: cover;
+  background-position: center;
+  font-family: Arial, sans-serif;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-bottom: 2px solid rgba(231, 70, 70, 0.8);
+  backdrop-filter: blur(9px);
+}
+
+.hamburger {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  background-color: silver;
+  margin-left: 20%;
+  margin-right: 20%;
+  border-radius: 8px;
+  border: 2px solid black;
+}
+
+.hamburger ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.hamburger ul li {
+  margin: 0 10px;
+}
+
+.hamburger ul li a {
+  text-decoration: none;
+  color: rgba(231, 70, 70, 0.8);
+  font-size: 20px;
+  font-weight: 600;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.hamburger ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  color: #333;
+}
+
+.header {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.marq {
+  font-size: 18px;
+  color: rgba(15, 6, 6, 0.4);
+  transition: transform 0.3s ease-in-out;
+}
+
+.marq:hover {
+  transform: scale(1.05);
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: rgba(231, 70, 70, 0.8);
+  text-align: center;
+  margin-top: 7%;
+  transition: transform 0.3s ease-in-out;
+}
+
+h1:hover {
+  transform: scale(1.1);
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+.main-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+  padding: 20px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.main-section:hover {
+  transform: scale(1.02);
+}
+
+.section {
+  border: 2px solid rgb(211, 122, 122);
+  text-align: center;
+  color: rgba(231, 70, 70, 0.8);
+  border-radius: 8px;
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.8);
+  transition: transform 0.3s ease-in-out;
+}
+
+.section img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.section:hover {
+  transform: scale(1.05);
+}
+
+/* Styles for About Us and Our Mission sections */
+.about-us, .our-mission {
+  padding: 20px;
+  margin: 20px 0;
+  border: 2px solid rgba(231, 70, 70, 0.8);
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 8px;
+  padding: 15px;
+  margin: 50px 50px;
+  font-family: Arial, sans-serif;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  
+}
+.about-us h2, .our-mission h2 {
+  color: rgba(231, 70, 70, 0.8);
+  text-align: center;
+}
+
+.about-us p, .our-mission p {
+  color: #666;
+  line-height: 1.6;
+  font-size: 1.10rem;
+}
+.about-us{
+  margin-top: 30%;
+}
+.about-us:hover, .our-mission:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: scale(1.02); 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+@media (max-width: 768px) {
+  .hamburger ul {
+    flex-direction: column;
+  }
+
+  .hamburger ul li {
+    margin: 10px 0;
+  }
+
+  .main-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .section {
+    width: 90%;
+  }
+
+  .about-us, .our-mission {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .marq {
+    font-size: 16px;
+  }
+
+  .section, .about-us, .our-mission {
+    width: 100%;
+    padding: 10px;
+  }
+}
+
+
+
+
+home.html
+
+
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Welcome to the Customer Resources Management. We provide both online and offline services to meet your needs.">
+  <title>Login Form</title>
+  <link rel="stylesheet" href="{% static 'CSS/styles.css' %}">
+</head>
+<body>
+  <div class="hamburger">
+    <div class="links">
+      <ul>
+        <li><a href="/index.html" title="Customer">Customer</a></li>
+        <li><a href="/index.html" title="Technician">Technician</a></li>
+        <li><a href="/index.html" title="Employee">Employee</a></li>
+        <li><a href="/index.html" title="Quality Assurance">Quality Assurance</a></li>
+        <li><a href="/index.html" title="Admin">Admin</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="header">
+    <marquee class="marq" direction="left">
+      <div class="geek1">
+        Welcome to the Customer Requirement Management
+      </div>
+    </marquee>
+  </div>
+  <div class="about-us">
+    <h2>About Us</h2>
+    <p>Welcome to our company, where innovation meets customer-centricity. At our company, we are dedicated to revolutionizing the way businesses manage their relationships with customers. Our flagship project,  is designed to empower companies with cutting-edge CRM solutions that drive efficiency, enhance engagement, and foster long-term success.Founded on the principles of excellence and integrity, has been at the forefront of technology-driven business solutions. Our team of industry experts and technology enthusiasts collaborates tirelessly to deliver a CRM platform that is not only robust and scalable but also intuitive and tailored to the unique needs of each organization.</p>
+  </div>
+
+  <div class="our-mission">
+    <h2>Our Mission</h2>
+    <p>Our mission is to transform customer relationship management by providing businesses with the tools they need to understand, connect with, and exceed the expectations of their customers. We aim to simplify complex processes, streamline operations, and offer actionable insights that lead to measurable growth.</p>
+  </div>
+  <h1>Services</h1>
+  <div class="main-section">
+    <div class="section">
+      <h2>Online Service</h2>
+      <img src="{% static '/img/hp1.png' %}" alt="Online Service">
+      <p>All online services will be provided</p>
+    </div>
+    <div class="section">
+      <h2>Offline Service</h2>
+      <img src="{% static '/img/hp2.png' %}" alt="Offline Service">
+      <p>All types of offline services will be provided</p>
+    </div>
+    <div class="section">
+      <h3>Super Service</h3>
+      <img src="{% static '/img/hp3.png' %}" alt="Super Service">
+      <p>Both online and offline services will be provided</p>
+    </div>
+  </div>
+</body>
+</html>
+
+
+
+index.html
+
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Form </title>
+  
+  <link rel="stylesheet" href="{% static '/CSS/style.css' %}">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+  <div class="wrapper">
+    <form action="">
+      <h1>Login</h1>
+      <div class="input-box">
+        <input type="text" placeholder="Username"  id="ip2"   required>
+        <i class='bx bxs-user'></i>
+      </div>
+      <div class="input-box">
+        <input type="password" placeholder="Password" id="ip1"  required>
+        <i class='bx bxs-lock-alt' ></i>
+      </div>
+      <div class="remember-forgot">
+        <label><input type="checkbox">Remember Me</label>
+        <a href="#">Forgot Password</a>
+      </div>
+      <div class="register-link">
+        <p>Dont have an account? <a href="/signup.html">Register</a></p>
+      </div>
+    </form>
+    <button type="submit" class="btn" onclick="check()"   >Login</button>
+  </div>
+  <script src="{% static '/javascript/index.js' %}"></script>
+</body>
+</html>
+
+
+
+signup.html
+
+
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign-up Form </title>
+  <link rel="stylesheet" href="{% static '/CSS/style.css' %}">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+  <div class="wrapper">
+    <form action="">
+      <h1>Sign-up</h1>
+      <div class="input-box">
+        <input type="text" placeholder="Username" required>
+        <i class='bx bxs-user'></i>
+      </div>
+      <div class="input-box">
+        <input type="password" placeholder="password" id="sp1" required>
+        <i class='bx bxs-lock-alt' ></i>
+      </div>
+      <div class="remember-forgot">
+        <label><input type="checkbox">Remember Me</label>
+        <a href="#">Forgot Password</a>
+      </div>
+    </form>
+    <button class="btn" onclick="cheeck()"   >Sign up</button>
+  </div>
+  <script src="{% static '/javascript/signup.js' %}"></script>
+</body>
+</html>
